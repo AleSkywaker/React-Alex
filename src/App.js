@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function Titulo() {
-  return <h1>Hola Alex</h1>;
+// function Saluda(props) {
+//   return <h1>Hola {props.nombre}</h1>;
+// }
+
+// const Saluda = (props) => <h1>Hola {props.nombre}</h1>;
+
+class Saluda extends Component {
+  render() {
+    return <h1>Hola {this.props.nombre}</h1>;
+  }
 }
 
 function App() {
@@ -22,7 +30,7 @@ function App() {
         >
           Learn React
         </a>
-        <Titulo />
+        <Saluda nombre='Alex Colombo' />
       </header>
     </div>
   );
