@@ -1,36 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import { Saluda, Text, Contador } from './sections/components';
+import { Formulario } from './sections/forms';
 import logo from './logo.svg';
 import './App.css';
 
-// function Saluda(props) {
-//   return <h1>Hola {props.nombre}</h1>;
-// }
-
-// const Saluda = (props) => <h1>Hola {props.nombre}</h1>;
-
-class Saluda extends Component {
-  render() {
-    return <h1>Hola {this.props.nombre}</h1>;
-  }
-}
-
 function App() {
+  const ceo = {
+    nombre: 'Alex',
+    email: 'alex@email.com',
+  };
   return (
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-        <Saluda nombre='Alex Colombo' />
+        <Formulario />
+
+        {/* <Contador />
+        <Text
+          nombre='Sandro'
+          number={88}
+          isActivated
+          arrayOfNumber={[1, 2, 5, 40]}
+          objecto={ceo}
+          titulo={<h1>Titulo de la web</h1>}
+        />
+        <Saluda nombre='Alex Colombo' /> */}
       </header>
     </div>
   );
